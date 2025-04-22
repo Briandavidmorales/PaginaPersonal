@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background: #2323238d;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin: 0; /* Elimina cualquier margen adicional */
+    height: 60px; /* Define una altura fija si es necesario */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    backdrop-filter: blur(8px); /* Difumina lo que está detrás */
+    -webkit-backdrop-filter: blur(8px); /* Para compatibilidad con Safari */
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #9595a1;
+    font-weight: 600;
+  }
+
+  nav a.active {
+    color: #facc15; /* Amarillo dorado como resaltado */
+    border-bottom: 2px solid #facc15;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background: url('/Images/Vendedor.jpg') no-repeat center center/cover;
+    background-position: center ;
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  header h1, header p {
+    position: relative;
+    z-index: 1;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 80px; /* Espacio para que el título no quede oculto por el nav */
+  }
+
+  section h2 {
+    margin-bottom: 20px;
+    color: #1e1e2f;
+    text-align: center;
+  }
+
+  .skills, .logros, .testimonios, .contacto {
+    background: #dddddd45;
+    padding: 60px 20px;
+  }
+
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .skill-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .skill-list i {
+    margin-right: 15px;
+    color: #1e1e2f;
+    font-size: 1.5rem;
+  }
+  
+  .logro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  
+  .logro-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .logro-list i {
+    margin-right: 15px;
+    color: #1e1e2f;
+    font-size: 1.5rem;
+  }
+
+  .testimonio {
+    background: white;
+    padding: 20px;
+    border-left: 4px solid #1e1e2f;
+  }
+
+  footer {
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  a.button {
+    background: #1e1e2f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .accordion {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .accordion-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  .accordion-header {
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .accordion-header i {
+    margin-right: 15px;
+    color: #1e1e2f;
+    font-size: 1.3rem;
+  }
+  
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #444;
+    transition: height 0.4s ease, padding 0.3s ease;
+  }
+
+  .seccion-contacto {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .seccion-contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contacto-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+  
+  .contacto-links li {
+    margin: 15px 0;
+    font-size: 1.1rem;
+  }
+  
+  .contacto-links i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: #1e1e2f;
+  }
+  
+  .contacto-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .contacto-links a:hover {
+    color: #1e90ff;
+    
+  }
+
+  .contacto-links li:hover i {
+    color: #1e90ff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  
+  
