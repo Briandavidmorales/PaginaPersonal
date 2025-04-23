@@ -11,13 +11,23 @@
 </head>
 <body>
   <nav>
-    <a href="#quien-soy">¿Quién soy?</a>
-    <a href="#metodologia">Metodología</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#logros">Logros</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#contacto">Contacto</a>
+    <div class="container">
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars" id="menu-icon"></i>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#quien-soy">¿Quién soy?</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#logros">Logros</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
   </nav>
+  
+  <!-- FONDO OSCURO -->
+  <div class="overlay" id="overlay"></div>
 
   <header>
     <h1>Juan Pérez</h1>
@@ -121,6 +131,7 @@
 
   <script src="js/nav.js"></script>
   <script src="js/acordeon.js"></script>
+  <script src="js/menuToggle.js"></script>
 </body>
 </html>
 
