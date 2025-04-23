@@ -69,7 +69,7 @@
     left: 0;
     width: 100%;
     height: 130%;
-    background: url('/Images/vendedor.jpg') no-repeat center center/cover;
+    background: url('/img/vendedor.jpg') no-repeat center center/cover;
     background-position: center ;
     background-size: cover;
     z-index: 0;
